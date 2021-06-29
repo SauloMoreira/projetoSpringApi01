@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence xmlns="http://xmlns.jcp.org/xml/ns/persistence"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence
+          http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd"
+	version="2.1">
+	<!-- Nome de configuração de conexão com o MySQL ('conexao_mysql') -->
+	<persistence-unit name="conexao_mysql">
+		<properties>
+			<!-- parametros de conexão -->
+			<property name="javax.persistence.jdbc.url"
+				value="jdbc:mysql://localhost:3306/projetoApi01?serverTimezone=UTC" />
+			<property name="javax.persistence.jdbc.user" value="root" />
+			<property name="javax.persistence.jdbc.password"
+				value="scm300501" />
+			<property name="javax.persistence.jdbc.driver"
+				value="com.mysql.jdbc.Driver" />
+			<!-- parametros para o hibernate -->
+
+			<!-- definindo o dialeto SQL que o HIbernate irá utilizar para o banco 
+				de dados -->
+			<property name="hibernate.dialect"
+				value="org.hibernate.dialect.MySQLDialect" />
+			<!-- exibir todos os comandos SQL geradosna base de dados em log -->
+			<property name="hibernate.show_sql" value="true" />
+			<!-- exibir os comandos SQL em log de maneira formatada -->
+			<property name="hibernate.format_sql" value="true" />
+		</properties>
+	</persistence-unit>
+
+</persistence>
